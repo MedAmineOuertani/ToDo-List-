@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List </title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1> <%=kindOfDay%> !</h1>
+    </div> 
+    <div class="box"> 
+           <!--<li> <%=newitem%> </li> --> 
+           <% for (var i=0;i<newitem.length;i++){ %>
+               <div class="item">
+                   <input type="checkbox">
+                   <p><%= newitem[i]  %> </p></div>
+           <% }%>
+
+        <form action="/" method="post" class="item">
+            <input type="text" placeholder="New Item" name="item" autocomplete="off">
+            <button type="submit">+</button>
+        </form>
+    </div>
+    <footer>Made By Mohamed Amine Ouertani</footer>
+</body>
+</html>
